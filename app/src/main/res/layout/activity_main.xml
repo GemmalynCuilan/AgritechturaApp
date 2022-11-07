@@ -25,7 +25,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="16dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -40,8 +40,8 @@
             android:layout_marginTop="44dp"
             android:layout_marginEnd="32dp"
             android:background="@drawable/background_btn"
-            android:textAllCaps="false"
             android:text="Sign In"
+            android:textAllCaps="false"
             android:textSize="20dp" />
 
         <Button
@@ -53,8 +53,8 @@
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="32dp"
             android:background="@drawable/background_btnsignup"
-            android:textAllCaps="false"
             android:text="Sign Up"
+            android:textAllCaps="false"
             android:textSize="20dp" />
     </LinearLayout>
 
