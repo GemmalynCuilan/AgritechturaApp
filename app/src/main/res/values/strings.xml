@@ -20,4 +20,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="title_activity_homu_ui">homuUI</string>
+    <string name="menu_profile">profile</string>
+    <string name="menu_profile2">profile2</string>
 </resources>

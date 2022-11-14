@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1058207301294",
+    "firebase_url": "https://agritechturaapp-default-rtdb.firebaseio.com",
+    "project_id": "agritechturaapp",
+    "storage_bucket": "agritechturaapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058207301294:android:a724c496484e673a34b73f",
+        "android_client_info": {
+          "package_name": "com.example.agritechturaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058207301294-0d8o3ui7juigprmfq50vvq8upfou7q80.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.agritechturaapp",
+            "certificate_hash": "2c1bf884d792cd6735530d7e9db40c60a730ca97"
+          }
+        },
+        {
+          "client_id": "1058207301294-jgcui2gdki5kcj94ckapbkh6clfvf95q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARTnhymZaBUllioys4EynhhoMIPbiWjdw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1058207301294-jgcui2gdki5kcj94ckapbkh6clfvf95q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

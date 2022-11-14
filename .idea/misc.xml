@@ -12,20 +12,30 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2075" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/drawable/ic_market.xml" value="0.1965" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/drawable/ic_menu_camera.xml" value="0.129" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.1625" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/drawable/side_nav_bar.xml" value="0.129" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/activity_home.xml" value="0.14" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/activity_login.xml" value="0.16" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/activity_home.xml" value="0.15" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/activity_homu_ui.xml" value="0.17" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/activity_main.xml" value="0.13" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/activity_sign_up.xml" value="0.15" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/activity_sign_up.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/app_bar_homu_ui.xml" value="0.12972972972972974" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/app_bar_main.xml" value="0.12972972972972974" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/background_btn.xml" value="0.11277173913043478" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/content_homu_ui.xml" value="0.1287568306010929" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/content_main.xml" value="0.12972972972972974" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/fragment_gallery.xml" value="0.12972972972972974" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/fragment_gallery2.xml" value="0.12972972972972974" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/fragment_home.xml" value="0.12972972972972974" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/fragment_home2.xml" value="0.12972972972972974" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/fragment_slideshow.xml" value="0.14" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/fragment_slideshow2.xml" value="0.12905405405405404" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/nav_header_homu_ui.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/nav_header_main.xml" value="0.33" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/menu/activity_main_drawer.xml" value="0.12972972972972974" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/menu/homu_u_i.xml" value="0.12972972972972974" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/menu/main_activity2.xml" value="0.12972972972972974" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/menu/main_menu.xml" value="0.12972972972972974" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/menu/main_menu.xml" value="0.2" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2075" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2075" />
       </map>

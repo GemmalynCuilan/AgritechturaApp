@@ -14,6 +14,11 @@
         android:theme="@style/Theme.AgritechturaApp"
         tools:targetApi="31">
         <activity
+            android:name=".homuUI"
+            android:exported="false"
+            android:label="@string/title_activity_homu_ui"
+            android:theme="@style/Theme.AgritechturaApp.NoActionBar" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
