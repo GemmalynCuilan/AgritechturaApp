@@ -14,10 +14,19 @@
         android:theme="@style/Theme.AgritechturaApp"
         tools:targetApi="31">
         <activity
-            android:name=".homuUI"
+            android:name=".ScheduleReminder"
+            android:exported="false" />
+        <activity
+            android:name=".TipsandTutorial"
+            android:exported="false" />
+        <activity
+            android:name=".HomeUi"
             android:exported="false"
-            android:label="@string/title_activity_homu_ui"
+            android:label="@string/title_activity_home_ui"
             android:theme="@style/Theme.AgritechturaApp.NoActionBar" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
         <activity
             android:name=".HomeActivity"
             android:exported="false" />

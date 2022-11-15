@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation2"
+    android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_home">
 
     <fragment
@@ -12,19 +12,14 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_profile2"
-        android:name="com.example.agritechturaapp.ui.profile.ProfileFragment"
-        android:label="@string/menu_profile2"
-        tools:layout="@layout/fragment_profile2" />
+        android:id="@+id/nav_gallery"
+        android:name="com.example.agritechturaapp.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.agritechturaapp.ui.schedulereminder.ReminderFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-    <fragment
-        android:id="@+id/nav_b"
-        android:name="com.example.agritechturaapp.ui.schedulereminder.ReminderFragment"
+        android:name="com.example.agritechturaapp.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>

@@ -58,37 +58,37 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void userLogin() {
-       String emailAdd = email.getText().toString().trim();
-       String  pass = password.getText().toString().trim();
+        String emailAdd = email.getText().toString().trim();
+        String  pass = password.getText().toString().trim();
 
-     if(emailAdd.isEmpty()){
-         email.setError("Email is required!");
-         email.requestFocus();
-         return;
-     }
-      if(!Patterns.EMAIL_ADDRESS.matcher(emailAdd).matches()){
-          email.setError("Please enter a valid email!");
-          email.requestFocus();
-          return;
-      }
-      if(pass.isEmpty()){
-          password.setError("Password id required!");
-          password.requestFocus();
-      }
+        if(emailAdd.isEmpty()){
+            email.setError("Email is required!");
+            email.requestFocus();
+            return;
+        }
+        if(!Patterns.EMAIL_ADDRESS.matcher(emailAdd).matches()){
+            email.setError("Please enter a valid email!");
+            email.requestFocus();
+            return;
+        }
+        if(pass.isEmpty()){
+            password.setError("Password id required!");
+            password.requestFocus();
+        }
 
 
-      mAuth.signInWithEmailAndPassword(emailAdd, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-          @Override
-          public void onComplete(@NonNull Task<AuthResult> task) {
-              if(task.isSuccessful()){
-                      startActivity(new Intent(LoginActivity.this, homuUI.class));
-                      Toast.makeText(LoginActivity.this, "Successfully Login!", Toast.LENGTH_LONG).show();
+        mAuth.signInWithEmailAndPassword(emailAdd, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    startActivity(new Intent(LoginActivity.this, HomeUi.class));
+                    Toast.makeText(LoginActivity.this, "Successfully Login!", Toast.LENGTH_LONG).show();
 
-              }else{
-                  Toast.makeText(LoginActivity.this, "Failed to login!Please check your credentials", Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(LoginActivity.this, "Failed to login!Please check your credentials", Toast.LENGTH_LONG).show();
 
-              }
-          }
-      });
+                }
+            }
+        });
     }
 }

@@ -23,4 +23,9 @@
     <string name="title_activity_homu_ui">homuUI</string>
     <string name="menu_profile">profile</string>
     <string name="menu_profile2">profile2</string>
+    <string name="menu_reminder">reminder</string>
+    <string name="menu_logout">logout</string>
+    <string name="title_activity_home_ui">HomeUI</string>
+    <string name="menu_schedule">schedule</string>
+    <string name="menu_Logout">Logout</string>
 </resources>
