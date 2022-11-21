@@ -4,17 +4,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/logobck"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/app_bar_dashboard"
-    android:background="@drawable/logobck">
+    tools:showIn="@layout/app_bar_dashboard">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_menu"
-        android:layout_marginTop="7dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="-16dp">
+
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_btnsignup"
+            app:srcCompat="@drawable/agrilog1o" />
+
+        <EditText
+            android:layout_width="302dp"
+            android:layout_height="57dp"
+            android:layout_alignBottom="@+id/imageView3"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="-14dp"
+            android:layout_marginEnd="39dp"
+            android:layout_marginBottom="-39dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_btn"
+            android:drawableRight="@drawable/ic_search"
+            android:fontFamily="sans-serif"
+            android:hint="Search"
+            android:imeOptions="actionSearch"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+        <ImageButton
+            android:id="@+id/calendarbtn"
+            android:layout_width="155dp"
+            android:layout_height="146dp"
+            android:layout_above="@+id/profilebtn"
+            android:layout_below="@+id/imageView3"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="68dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/cal" />
+
+        <ImageButton
+            android:id="@+id/tipsbtn"
+            android:layout_width="148dp"
+            android:layout_height="146dp"
+            android:layout_below="@+id/imageView3"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="285dp"
+            android:layout_toEndOf="@+id/calendarbtn"
+            android:background="@drawable/book" />
+
+        <ImageButton
+            android:id="@+id/profilebtn"
+            android:layout_width="159dp"
+            android:layout_height="128dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="42dp"
+            android:layout_marginEnd="192dp"
+            android:layout_marginBottom="125dp"
+            android:background="@drawable/pf" />
+
+
+    </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

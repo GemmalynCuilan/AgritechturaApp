@@ -5,7 +5,10 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
+import com.google.android.gms.auth.api.Auth;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -22,7 +25,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.agritechturaapp.databinding.ActivityDashboardBinding;
 
 public class Dashboard extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -30,6 +32,7 @@ public class Dashboard extends AppCompatActivity  implements NavigationView.OnNa
     private RecyclerView myList;
     private  RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
+    private ImageButton  calendarbtn, tipsbtn, profilebtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +40,8 @@ public class Dashboard extends AppCompatActivity  implements NavigationView.OnNa
         setContentView(R.layout.activity_dashboard);
 
 
-        myList = (RecyclerView) findViewById(R.id.recycler_menu);
-        myList.setLayoutManager(new LinearLayoutManager(Dashboard.this));
+        //myList = (RecyclerView) findViewById(R.id.recycler_menu);
+        //myList.setLayoutManager(new LinearLayoutManager(Dashboard.this));
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Agritectura");
@@ -53,6 +56,27 @@ public class Dashboard extends AppCompatActivity  implements NavigationView.OnNa
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        calendarbtn = (ImageButton) findViewById(R.id. calendarbtn);
+        calendarbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Dashboard.this, ScheduleReminder.class));
+            }
+        });
+        tipsbtn = (ImageButton) findViewById(R.id.tipsbtn);
+        tipsbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Dashboard.this, TipsandTutorial.class));
+            }
+        });
+        profilebtn = (ImageButton) findViewById(R.id.profilebtn);
+        profilebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Dashboard.this, ProfileActivity.class));
+            }
+        });
 
     }
 
@@ -83,7 +107,14 @@ public class Dashboard extends AppCompatActivity  implements NavigationView.OnNa
         if (id == R.id.nav_schedule) {
             Intent intent = new Intent(Dashboard.this, ScheduleReminder.class);
             startActivity(intent);
-        }
+
+        }else if (id == R.id.nav_logout) {
+        Intent intent = new Intent(Dashboard.this, LoginActivity.class);
+        Toast.makeText(Dashboard.this,"User has been Logout sucessfully!",Toast.LENGTH_LONG).show();
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
+    }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

@@ -11,8 +11,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="336dp"
-        android:layout_height="410dp"
+        android:layout_width="350dp"
+        android:layout_height="344dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="61dp"
         android:layout_marginEnd="45dp"
@@ -25,7 +25,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

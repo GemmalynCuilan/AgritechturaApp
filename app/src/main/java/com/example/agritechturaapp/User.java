@@ -1,19 +1,16 @@
 package com.example.agritechturaapp;
 
 public class User {
-    public String name, emailAdd, password;
+    public String name, emailAdd, pass;
 
 
-    public User(String name, String emailAdd){
-
-        }
         public User() {
         }
 
-        public User(String name, String emailAdd, String password) {
+    public User(String name, String emailAdd, String pass) {
             this.name = name;
             this.emailAdd = emailAdd;
-            this.password = password;
+            this.pass = pass;
 
         }
 

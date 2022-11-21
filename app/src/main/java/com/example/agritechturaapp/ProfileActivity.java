@@ -24,7 +24,7 @@ public class ProfileActivity extends AppCompatActivity {
 
 
     private Button logout;
-    private TextView name, phone, address, email;
+    private TextView fullname, phone, address, email;
 
     private FirebaseUser user;
     private DatabaseReference reference;
@@ -44,13 +44,22 @@ public class ProfileActivity extends AppCompatActivity {
                 startActivity(new Intent(ProfileActivity.this, MainActivity.class));
             }
         });
+        ImageButton arrowBack = (ImageButton) findViewById(R.id.arrowback_profile);
+        arrowBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ProfileActivity.this, Dashboard.class);
+                startActivity(intent);
+            }
+        });
+
 
         user = FirebaseAuth.getInstance().getCurrentUser();
-        reference = FirebaseDatabase.getInstance().getReference("users");
+        reference = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
 
         final TextView fullnametitle = (TextView) findViewById(R.id.fullname);
-        final TextView emailtitle = (TextView) findViewById(R.id.emailAddress);
+        final TextView emailAddresstitle = (TextView) findViewById(R.id.emailAddress);
 
 
         reference.child(userID).addValueEventListener(new ValueEventListener() {
@@ -60,10 +69,8 @@ public class ProfileActivity extends AppCompatActivity {
                 if (user != null) {
                     String fullname = user.name;
                     String emailAddress = user.emailAdd;
-
-
                     fullnametitle.setText(fullname);
-                    emailtitle.setText(emailAddress);
+                    emailAddresstitle.setText(emailAddress);
 
                 }
 

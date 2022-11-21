@@ -3,10 +3,12 @@ package com.example.agritechturaapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -24,6 +26,15 @@ public class ScheduleReminder extends AppCompatActivity {
         setContentView(R.layout.activity_schedule_reminder);
         dp = findViewById(R.id.dp);
         Calendar calendar = Calendar.getInstance();
+
+        ImageButton arrowBack = (ImageButton) findViewById(R.id.arrowback_profile);
+        arrowBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ScheduleReminder.this, Dashboard.class);
+                startActivity(intent);
+            }
+        });
 
         DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
             @Override
