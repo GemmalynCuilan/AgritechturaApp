@@ -5,12 +5,13 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity">
+    tools:context=".ProfileActivity"
+    android:background="@drawable/logobck">
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_settings"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/white">
+        android:background="#7CB342">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar_settings"
@@ -25,7 +26,7 @@
                     android:id="@+id/arrowback_profile"
                     android:layout_width="70dp"
                     android:layout_height="50dp"
-                    android:background="@color/white"
+                    android:background="#7CB342"
                     android:src="@drawable/ic_arrow"
                     tools:ignore="SpeakableTextPresentCheck" />
 
@@ -39,7 +40,7 @@
     <LinearLayout
         android:layout_width="376dp"
         android:layout_height="368dp"
-        android:background="@drawable/layout_background"
+        android:background="@drawable/background_btnsignup"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

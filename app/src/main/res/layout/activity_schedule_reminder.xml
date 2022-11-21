@@ -4,14 +4,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/logobck"
     tools:context=".ScheduleReminder">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_settings"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#7CB342"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/arrowback_profile"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:background="#7CB342"
+                    android:src="@drawable/ic_arrow"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <CalendarView
         android:id="@+id/calendarView"
-        android:layout_width="385dp"
-        android:layout_height="351dp"
-        android:layout_marginTop="68dp"
+        android:layout_width="322dp"
+        android:layout_height="285dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_btnsignup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/app_bar_settings" />
+
+    <RelativeLayout
+        android:layout_width="348dp"
+        android:layout_height="246dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/background_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView">
+
+        <RelativeLayout
+            android:layout_width="393dp"
+            android:layout_height="385dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/background_btnsignup">
+
+            <EditText
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="84dp"
+                android:hint="Write your task..." />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/dp"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="Pick you Date"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,7 +6,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 
-import com.google.android.gms.auth.api.Auth;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -23,9 +22,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.agritechturaapp.databinding.ActivityHomeUiBinding;
+import com.example.agritechturaapp.databinding.ActivityDashboardBinding;
 
-public class HomeUi extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener{
+public class Dashboard extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener{
 
 
     private RecyclerView myList;
@@ -35,11 +34,11 @@ public class HomeUi extends AppCompatActivity  implements NavigationView.OnNavig
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_ui);
+        setContentView(R.layout.activity_dashboard);
 
 
         myList = (RecyclerView) findViewById(R.id.recycler_menu);
-        myList.setLayoutManager(new LinearLayoutManager(HomeUi.this));
+        myList.setLayoutManager(new LinearLayoutManager(Dashboard.this));
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Agritectura");
@@ -73,22 +72,22 @@ public class HomeUi extends AppCompatActivity  implements NavigationView.OnNavig
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.nav_profile) {
-            Intent intent = new Intent(HomeUi.this, ProfileActivity.class);
+            Intent intent = new Intent(Dashboard.this, ProfileActivity.class);
             startActivity(intent);
         }
 
         if (id == R.id.nav_tips) {
-            Intent intent = new Intent(HomeUi.this, TipsandTutorial.class);
+            Intent intent = new Intent(Dashboard.this, TipsandTutorial.class);
             startActivity(intent);
         }
         if (id == R.id.nav_schedule) {
-            Intent intent = new Intent(HomeUi.this, ScheduleReminder.class);
+            Intent intent = new Intent(Dashboard.this, ScheduleReminder.class);
             startActivity(intent);
         }
-            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-            drawer.closeDrawer(GravityCompat.START);
-            return true;
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
 
 
-        }
     }
+}
