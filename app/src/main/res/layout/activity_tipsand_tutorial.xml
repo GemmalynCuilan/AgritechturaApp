@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TipsandTutorial">
+    tools:context=".TipsandTutorial"
+    android:background="@drawable/logobck">
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_settings"
         android:layout_width="match_parent"
@@ -34,88 +35,165 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <LinearLayout
-        android:layout_width="351dp"
-        android:layout_height="639dp"
-        android:orientation="vertical"
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="358dp"
+        android:layout_height="413dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/background_btnsignup"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_bar_settings">
+        app:layout_constraintVertical_bias="0.221">
 
-        <FrameLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="253dp">
+            android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/image" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="43dp">
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Backyard Farming Guide for Beginners"
-                android:textSize="20dp" />
-        </FrameLayout>
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:id="@+id/layoutProfile"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="42dp"
+                android:background="@drawable/background_btn"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/layoutTips"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintEnd_toStartOf="@+id/layoutSchedule"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/menu_garden"
+                    android:layout_width="93dp"
+                    android:layout_height="74dp"
+                    android:layout_margin="4dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="8dp"
+                    android:src="@drawable/gardening" />
 
                 <TextView
-                    android:id="@+id/textView3"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Starting a Backyard Farm"
-                    android:textSize="15dp"
+                    android:gravity="center"
+                    android:text="Gardening"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Have you ever thought of growing your own vegetables? It’s not as hard as you may think. As long as you have an area around your home that receives adequate sunshine and maintain a regular watering schedule, you can enjoy your own fresh crops every summer. Here are some tips to help get the beginner gardener started!" />
-
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Start Small"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="A garden doesn’t have to span your whole backyard to reap rewards. For beginners, start by creating a small garden space in the backyard. Tomatoes and cucumbers are generally a good starting point for beginners, as they require only moderate attention; plenty of sun and regular watering. You will however, need to think about how you will support the plant stocks as they grow. Generally, sturdy cages or stakes are the simplest solution and easy to install." />
-
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Grow Up to Make the Most Out of a Small Space"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Growing your crops up, with the help of cages, trellises, or other structures will help you fit more into a small garden space. It is also helpful for pest control and monitoring crop growth, as everything is more easily visible and there are less places for critters to hide. Certain vegetables varieties are better for this than others. Crops like tomatoes, cucumbers, peas, beans, squash, melons, and more all grow well on cages or trellises and allow you to better maximize your use of a small garden space." />
             </LinearLayout>
-        </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/layoutSchedule"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/background_btn"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/menu_pest"
+                    android:layout_width="86dp"
+                    android:layout_height="91dp"
+                    android:layout_margin="4dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="8dp"
+                    android:src="@drawable/sign" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Pest Control"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutTips"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/background_btn"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutProfile">
+
+                <ImageView
+                    android:id="@+id/menu_organic"
+                    android:layout_width="85dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="4dp"
+                    android:src="@drawable/soil" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Organic Farming"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
 
 
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="383dp"
+        android:layout_height="170dp"
+        android:layout_below="@+id/app_bar_settings"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="-1dp"
+        android:layout_marginEnd="20dp"
+        app:srcCompat="@drawable/image" />
+
+    <RelativeLayout
+        android:layout_width="253dp"
+        android:layout_height="52dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="-27dp"
+        android:layout_marginEnd="85dp"
+        android:background="@drawable/background_btn">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="253dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Tips and Tutorials"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

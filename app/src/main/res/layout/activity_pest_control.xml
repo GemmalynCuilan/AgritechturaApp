@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PestControl">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_settings"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#7CB342">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/arrowback_profile"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:background="#7CB342"
+                    android:src="@drawable/ic_arrow"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="677dp"
+        android:layout_below="@+id/app_bar_settings"
+        android:layout_marginTop="-3dp">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="314dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="68dp"
+            android:layout_marginEnd="29dp"
+            android:text="12 Steps to Preventing Garden Pests"
+            android:textSize="24sp" />
+
+        <ScrollView
+            android:layout_width="370dp"
+            android:layout_height="560dp"
+            android:layout_below="@+id/textView4"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="22dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="The following are some ways for preventing pests from taking over your garden without the use of chemicals." />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="#1: Encourage healthy soil"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Healthy soil makes healthy plants with strong immune systems, which are better able to fight off diseases and pests. Healthy soils feed and shelter beneficial soil life.  Natural fertilizers help build healthy soil. Fish and seaweed fertilizer, used once a month, can activate soil microbes." />
+
+                <TextView
+                    android:id="@+id/num2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="#2: Choose resistant varieties." />
+
+                <TextView
+                    android:id="@+id/nineDes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="This is an easy tip for preventing garden pests: Choose plant varieties that are naturally resistant to pests. Seed catalogs list varieties that are known for resistance.  For example, tromboncino squash appears to be more resistant to pests than other summer squash varieties." />
+
+                <TextView
+                    android:id="@+id/three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="#3: Plant in the right place" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Reserve plants that need full sun for full sun areas. Likewise, plant crops according to water needs. If a crop requires more water to stay healthy, grow it in an area that stays moist longer.  Crops may tolerate less than ideal conditions for a time, but eventually the stress will weaken them and they can succumb to pests. Planting in the right place is an easy step toward preventing garden pests." />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="#4: Attract beneficial insects." />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Beneficial insects prey on pests, and they will naturally come to your garden in search of nectar, pollen, and shelter. Encourage them to stick around by growing flowers that meet these needs." />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="#5: Repel pests." />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Strong-scented herbs can deter pests when planted among or near the vegetables. This is a super-easy way to support your efforts in preventing garden pests.  Some of my favorite strong-scented annuals include calendula, coriander, and garlic.  Plant strong-scented, perennial herbs at the edge. Anise hyssop, chives, and thyme are some of my favorites" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="#6: Rotate crops." />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Crop rotation confuses pests, reduces their concentration in specific areas, and helps you manage soil fertility.  Leave two to three years between planting members of the same crop family in a particular area.  Of course, this can be challenging in a small or shady garden. However, if a crop is overcome by a pest, don’t plant it in that spot for at least two years. Or plant a cover crop to allow that area to rest for a season.  This is a difficult step to take in preventing garden pests, but your patience will pay off." />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="#7: Practice interplanting." />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Interplanting means alternating specific crops, herbs, and flowers to confuse pests. Pests enjoy monocrops, which is why industrial farms are often heavily sprayed with pesticides. Instead of monocrops, alternate rows of vegetables with rows of beneficial insect-attracting and pest-repelling herbs and flowers.  Confusing pests is a sneaky trick for preventing garden pests from finding your crops. For example, I interplant my cabbage family crops with cilantro, calendula, and onions." />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="#8: Use floating row covers." />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Summer-weight row cover allows water and light to penetrate while keeping pests out. You may only need to use floating row cover over young plants until they’re established. Weigh down the sides with heavy objects like bricks or rocks.  If a particular pest on a particular crop seems to be a recurring problem for you—and you’ve followed the other tips in this article to the letter—you might consider using permanent low tunnel hoops for the problem crop.  Be sure to lift the cover for a few hours each morning to let pollinators in." />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="#9: Create permanent walkways." />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Permanent pathways encourage beneficial insects while temporary pathways that are tilled each year destroy them and their habitat.  The type of pathway material you use will depend on your specific situation. White clover, wood chips, or gravel are a few of my favorites.  Having permanent pathways allows you to have permanent beds where you can continue to build fertility over time. Better fertility can, of course, support your garden’s resistance to ‘catching a bug’." />
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="#10: Found a few pests? Leave them be." />
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Having a few pests is actually a good thing. Seems counterproductive, but without a few pest “baits”, the beneficial insects that dine on them wouldn’t stick around! Beneficial insects are attracted to gardens that have their favorite foods.  In other words, the occasional pest “bait” is okay." />
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="#11: Handle an outbreak." />
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="When a few pests turn into an outbreak, remove infested plants to keep the damage from spreading.  It bears repeating that I don’t promote treating pests with pesticides—organic or not. Rather, start back at #1 above and work through the prevention tactics in this guide." />
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" #12: Be proactive rather than reactive." />
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A pest outbreak is an opportunity to learn how to strengthen your garden ecosystem." />
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

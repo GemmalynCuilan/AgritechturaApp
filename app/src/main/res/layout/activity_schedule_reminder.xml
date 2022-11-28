@@ -25,8 +25,10 @@
 
                 <ImageButton
                     android:id="@+id/arrowback_profile"
-                    android:layout_width="70dp"
+                    android:layout_width="60dp"
                     android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="-14dp"
                     android:background="#7CB342"
                     android:src="@drawable/ic_arrow"
                     tools:ignore="SpeakableTextPresentCheck" />
@@ -172,8 +174,8 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingBtn"
-        android:layout_width="152dp"
-        android:layout_height="wrap_content"
+        android:layout_width="57dp"
+        android:layout_height="58dp"
         android:layout_marginBottom="28dp"
         android:clickable="true"
         android:src="@drawable/ic_baseline_add_24"

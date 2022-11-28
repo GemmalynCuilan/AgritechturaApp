@@ -5,10 +5,19 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.agritechturaapp.profile.ChangePassword;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -18,15 +27,20 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 
 public class Dashboard extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener{
 
-
+    private FirebaseUser User;
+    private FirebaseAuth Auth;
     private RecyclerView myList;
     private  RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
-    private ImageView  menu_profile, menu_schedule, menu_tips, menu_prices;
-
+    private ImageView  menu_profile, menu_schedule, menu_tips;
+    private String userId = "";
+    private FirebaseUser user;
+    private DatabaseReference databaseReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,32 +63,34 @@ public class Dashboard extends AppCompatActivity  implements NavigationView.OnNa
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        menu_profile = (ImageView) findViewById(R.id. menu_profile);
-        menu_profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Dashboard.this, ProfileActivity.class));
-            }
-        });
-        menu_schedule = (ImageView) findViewById(R.id.menu_schedule);
-        menu_schedule.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Dashboard.this, ScheduleReminder.class));
-            }
-        });
-        menu_tips = (ImageView) findViewById(R.id.menu_tips);
-        menu_tips.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Dashboard.this, TipsandTutorial.class));
-            }
-        });
+                menu_profile = (ImageView) findViewById(R.id.menu_profile);
+                menu_profile.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        startActivity(new Intent(Dashboard.this, ProfileActivity.class));
+                    }
+                });
+                menu_schedule = (ImageView) findViewById(R.id.menu_schedule);
+                menu_schedule.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        startActivity(new Intent(Dashboard.this, ScheduleReminder.class));
+                    }
+                });
+                menu_tips = (ImageView) findViewById(R.id.menu_tips);
+                menu_tips.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        startActivity(new Intent(Dashboard.this, TipsandTutorial.class));
+                    }
+                });
 
-    }
+            }
 
 
-    @Override
+
+
+            @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {

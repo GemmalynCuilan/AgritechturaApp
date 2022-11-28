@@ -69,7 +69,7 @@ public class ProfileActivity extends AppCompatActivity {
                 emailAdd.setText(User.getEmail());
 
                 if(user.getProfileImage().equals("default")){
-                    profileImage.setImageResource(R.drawable.agrilog1o);
+                    profileImage.setImageResource(R.drawable.profilepic);
                 }else{
                     Glide.with(getApplicationContext()).load(user.getProfileImage()).into(profileImage);
 

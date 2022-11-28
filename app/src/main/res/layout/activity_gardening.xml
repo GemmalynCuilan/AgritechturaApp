@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Gardening">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_settings"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#7CB342">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/arrowback_profile"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:background="#7CB342"
+                    android:src="@drawable/ic_arrow"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="367dp"
+        android:layout_height="680dp"
+        android:layout_below="@+id/app_bar_settings"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="12dp">
+
+        <TextView
+            android:id="@+id/titleTips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#43A047"
+            android:gravity="center"
+            android:text="Gardening Tips and Tutorial!"
+            android:textSize="34sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/titleTips"
+            android:layout_marginTop="-4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/onetip"
+                    android:layout_width="match_parent"
+                    android:layout_height="161dp"
+                    android:layout_marginTop="4dp">
+
+
+                    <TextView
+                        android:id="@+id/spade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1.SPADE"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="207dp"
+                        android:layout_height="87dp"
+                        android:layout_below="@+id/spade"
+                        android:layout_marginTop="-18dp"
+                        app:srcCompat="@drawable/spade" />
+
+                    <TextView
+                        android:id="@+id/spadeText"
+                        android:layout_width="311dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@+id/imageView7"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="31dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="2dp"
+                        android:text="clean the area you are planting; loosen and turn the soil over" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/twotips"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="1dp">
+
+
+                    <TextView
+                        android:id="@+id/soil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2. SOIL"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="207dp"
+                        android:layout_height="87dp"
+                        android:layout_below="@+id/soil"
+                        android:layout_marginTop="-18dp"
+                        app:srcCompat="@drawable/soil" />
+
+                    <TextView
+                        android:id="@+id/soilText"
+                        android:layout_width="311dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@+id/imageView8"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="31dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="2dp"
+                        android:text="add additional soil;preferably organic soil to garden. It makes a richer soil." />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/threetip"
+                    android:layout_width="match_parent"
+                    android:layout_height="161dp"
+                    android:layout_marginTop="4dp">
+
+
+                    <TextView
+                        android:id="@+id/seed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3.SEED"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="207dp"
+                        android:layout_height="87dp"
+                        android:layout_below="@+id/seed"
+                        android:layout_marginTop="-18dp"
+                        app:srcCompat="@drawable/seeds" />
+
+                    <TextView
+                        android:id="@+id/seedText"
+                        android:layout_width="311dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@+id/imageView"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="31dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="2dp"
+                        android:text="carefully plant your seed or plant starts in the soil." />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/foutip"
+                    android:layout_width="match_parent"
+                    android:layout_height="161dp"
+                    android:layout_marginTop="4dp">
+
+
+                    <TextView
+                        android:id="@+id/water"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.WATERING"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/waterimg"
+                        android:layout_width="207dp"
+                        android:layout_height="87dp"
+                        android:layout_below="@+id/water"
+                        android:layout_marginTop="-18dp"
+                        app:srcCompat="@drawable/water" />
+
+                    <TextView
+                        android:id="@+id/waterText"
+                        android:layout_width="311dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@+id/waterimg"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="31dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="2dp"
+                        android:text="plants need the right amount of the water- not too much or too little. Wait until the soil is dry to water." />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fivetip"
+                    android:layout_width="match_parent"
+                    android:layout_height="161dp"
+                    android:layout_marginTop="4dp">
+
+
+                    <TextView
+                        android:id="@+id/sun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5. SUNLIGHT"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/sunImg"
+                        android:layout_width="207dp"
+                        android:layout_height="87dp"
+                        android:layout_below="@+id/sun"
+                        android:layout_marginTop="-18dp"
+                        app:srcCompat="@drawable/sunny" />
+
+                    <TextView
+                        android:id="@+id/sunText"
+                        android:layout_width="311dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@+id/sunImg"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="31dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="2dp"
+                        android:text="Grow your plants in a location so they get the sunlight they need" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sixtip"
+                    android:layout_width="match_parent"
+                    android:layout_height="161dp"
+                    android:layout_marginTop="4dp">
+
+
+                    <TextView
+                        android:id="@+id/climate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5.CLIMATE"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/climg"
+                        android:layout_width="207dp"
+                        android:layout_height="87dp"
+                        android:layout_below="@+id/climate"
+                        android:layout_marginTop="-18dp"
+                        app:srcCompat="@drawable/climate" />
+
+                    <TextView
+                        android:id="@+id/clText"
+                        android:layout_width="311dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@+id/climg"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="31dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="2dp"
+                        android:text="Make certain your plants grow well in the climate you live in." />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/seventip"
+                    android:layout_width="match_parent"
+                    android:layout_height="161dp"
+                    android:layout_marginTop="4dp">
+
+
+                    <TextView
+                        android:id="@+id/pest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="7.PEST CONTROL"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/pestimg"
+                        android:layout_width="207dp"
+                        android:layout_height="87dp"
+                        android:layout_below="@+id/pest"
+                        android:layout_marginTop="-18dp"
+                        app:srcCompat="@drawable/sign" />
+
+                    <TextView
+                        android:id="@+id/pestText"
+                        android:layout_width="311dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@+id/pestimg"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="31dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="2dp"
+                        android:text="Controlling garden pests is important but ONLY use an organic pest control." />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/eighttip"
+                    android:layout_width="match_parent"
+                    android:layout_height="161dp"
+                    android:layout_marginTop="4dp">
+
+
+                    <TextView
+                        android:id="@+id/mulch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8.MULCHING"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/mulimg"
+                        android:layout_width="207dp"
+                        android:layout_height="87dp"
+                        android:layout_below="@+id/mulch"
+                        android:layout_marginTop="-18dp"
+                        app:srcCompat="@drawable/farmer" />
+
+                    <TextView
+                        android:id="@+id/mulchText"
+                        android:layout_width="311dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@+id/mulimg"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="31dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="2dp"
+                        android:text="Add much to the soil to improve soil moisturem fertility and health of soil." />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ninetip"
+                    android:layout_width="match_parent"
+                    android:layout_height="161dp"
+                    android:layout_marginTop="4dp">
+
+
+                    <TextView
+                        android:id="@+id/harvest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9.HARVEST"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/harvestimg"
+                        android:layout_width="207dp"
+                        android:layout_height="87dp"
+                        android:layout_below="@+id/harvest"
+                        android:layout_marginTop="-18dp"
+                        app:srcCompat="@drawable/harvester" />
+
+                    <TextView
+                        android:id="@+id/harvestText"
+                        android:layout_width="311dp"
+                        android:layout_height="48dp"
+                        android:layout_below="@+id/harvestimg"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="31dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="2dp"
+                        android:text="Harvesting your fruits and veggies is exciting for your family and especially your kids!" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
