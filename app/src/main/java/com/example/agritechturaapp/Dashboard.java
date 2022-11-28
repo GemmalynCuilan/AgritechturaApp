@@ -4,25 +4,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Menu;
-import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.google.android.gms.auth.api.Auth;
-import com.google.android.material.snackbar.Snackbar;
+import com.example.agritechturaapp.profile.ChangePassword;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
@@ -32,7 +25,7 @@ public class Dashboard extends AppCompatActivity  implements NavigationView.OnNa
     private RecyclerView myList;
     private  RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
-    private ImageButton  calendarbtn, tipsbtn, profilebtn;
+    private ImageView  menu_profile, menu_schedule, menu_tips, menu_prices;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,25 +49,25 @@ public class Dashboard extends AppCompatActivity  implements NavigationView.OnNa
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        calendarbtn = (ImageButton) findViewById(R.id. calendarbtn);
-        calendarbtn.setOnClickListener(new View.OnClickListener() {
+        menu_profile = (ImageView) findViewById(R.id. menu_profile);
+        menu_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Dashboard.this, ProfileActivity.class));
+            }
+        });
+        menu_schedule = (ImageView) findViewById(R.id.menu_schedule);
+        menu_schedule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Dashboard.this, ScheduleReminder.class));
             }
         });
-        tipsbtn = (ImageButton) findViewById(R.id.tipsbtn);
-        tipsbtn.setOnClickListener(new View.OnClickListener() {
+        menu_tips = (ImageView) findViewById(R.id.menu_tips);
+        menu_tips.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Dashboard.this, TipsandTutorial.class));
-            }
-        });
-        profilebtn = (ImageButton) findViewById(R.id.profilebtn);
-        profilebtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Dashboard.this, ProfileActivity.class));
             }
         });
 
@@ -100,12 +93,8 @@ public class Dashboard extends AppCompatActivity  implements NavigationView.OnNa
             startActivity(intent);
         }
 
-        if (id == R.id.nav_tips) {
-            Intent intent = new Intent(Dashboard.this, TipsandTutorial.class);
-            startActivity(intent);
-        }
-        if (id == R.id.nav_schedule) {
-            Intent intent = new Intent(Dashboard.this, ScheduleReminder.class);
+        if (id == R.id.nav_changePassword) {
+            Intent intent = new Intent(Dashboard.this, ChangePassword.class);
             startActivity(intent);
 
         }else if (id == R.id.nav_logout) {

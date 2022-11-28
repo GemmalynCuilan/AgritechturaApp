@@ -13,13 +13,9 @@
             android:icon="@drawable/ic_person"
             android:title="@string/menu_profile" />
         <item
-            android:id="@+id/nav_schedule"
-            android:icon="@drawable/ic_calendar"
-            android:title="@string/menu_schedule" />
-        <item
-            android:id="@+id/nav_tips"
-            android:icon="@drawable/ic_tips"
-            android:title="Tips and Tutorial"/>
+            android:id="@+id/nav_changePassword"
+            android:icon="@drawable/ic_pword"
+            android:title="@string/menu_changePassword" />
         <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/ic_arrow"

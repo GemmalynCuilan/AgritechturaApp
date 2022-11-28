@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
@@ -37,74 +37,80 @@
     </com.google.android.material.appbar.AppBarLayout>
 
 
-    <LinearLayout
-        android:layout_width="376dp"
-        android:layout_height="368dp"
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="435dp"
+        android:layout_below="@+id/app_bar_settings"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="89dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="157dp"
         android:background="@drawable/background_btnsignup"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.297">
+        app:layout_constraintTop_toBottomOf="@+id/app_bar_settings">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImage"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/agrilog1o" />
 
         <TextView
-            android:id="@+id/title"
-            android:layout_width="249dp"
+            android:id="@+id/profile"
+            android:layout_width="143dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:drawablePadding="10dp"
-            android:padding="8dp"
-            android:text="MY PROFILE INFORMATION"
-            android:textSize="15dp" />
-
-        <TextView
-            android:id="@+id/nametitle"
-            android:layout_width="173dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:drawableLeft="@drawable/ic_person"
-            android:drawablePadding="10dp"
-            android:padding="8dp"
-            android:text="Full name"
-            android:textSize="15dp" />
+            android:layout_below="@+id/profileImage"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="-3dp"
+            android:layout_marginEnd="185dp"
+            android:text="PROFILE"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/fullname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:drawablePadding="10dp"
-            android:padding="8dp" />
-
-
-        <TextView
-            android:id="@+id/emailAddtitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:drawableLeft="@drawable/ic_email"
-            android:drawablePadding="10dp"
-            android:padding="8dp"
-            android:text="Email Address"
-            android:textSize="15dp" />
+            android:layout_below="@+id/profile"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="18dp"
+            android:drawableLeft="@drawable/ic_pword"
+            android:drawablePadding="18dp"
+            android:fontFamily="sans-serif"
+            android:hint="Gemmalyn Cuilan"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColorHint="@color/black"
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/emailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:drawablePadding="10dp"
-            android:padding="8dp" />
-
-
-        <Button
-            android:id="@+id/logout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Logout" />
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_below="@+id/fullname"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="18dp"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawablePadding="18dp"
+            android:fontFamily="sans-serif"
+            android:hint="gemmalyncuilan@gmail.com"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColorHint="@color/black"
+            android:textSize="17dp" />
+    </RelativeLayout>
+</RelativeLayout>

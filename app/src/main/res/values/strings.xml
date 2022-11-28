@@ -29,4 +29,7 @@
     <string name="menu_schedule">schedule</string>
     <string name="menu_Logout">Logout</string>
     <string name="title_activity_dashboard">Dashboard</string>
+    <string name="back">back</string>
+    <string name="forward">forward</string>
+    <string name="menu_changePassword">Change password</string>
 </resources>
