@@ -18,7 +18,7 @@ import com.google.firebase.firestore.DocumentReference;
 public class NotesActivity extends AppCompatActivity {
 
     private EditText notes_text, content_text;
-    private ImageButton saveButton;
+    private ImageButton saveButton, menuButton;
     private TextView page_title;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,13 @@ public class NotesActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(NotesActivity.this, Dashboard.class);
                 startActivity(intent);
+            }
+        });
+        menuButton = findViewById(R.id.menuButton);
+        menuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(NotesActivity.this, NoteListActivity.class));
             }
         });
         notes_text = findViewById(R.id.notes_text);

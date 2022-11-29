@@ -1,26 +1,26 @@
 package com.example.agritechturaapp;
 
 public class User {
-    public String name, emailAdd, pass, profileImage;
+    public String fullname, email, pass, profileImage;
 
 
         public User() {
         }
 
-    public String getName() {
-        return name;
+    public String getFullname() {
+        return fullname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 
-    public String getEmailAdd() {
-        return emailAdd;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmailAdd(String emailAdd) {
-        this.emailAdd = emailAdd;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPass() {
@@ -37,9 +37,9 @@ public class User {
     public void setProfileImage(String profileImage) {
         this.profileImage = profileImage;
     }
-    public User(String name, String emailAdd, String pass, String profileImage) {
-            this.name = name;
-            this.emailAdd = emailAdd;
+    public User(String fullname, String email, String pass, String profileImage) {
+            this.fullname = fullname;
+            this.email = email;
             this.pass = pass;
             this.profileImage = profileImage;
 

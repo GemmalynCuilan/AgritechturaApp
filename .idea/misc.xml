@@ -17,7 +17,7 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/drawable/layout_background.xml" value="0.1375" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/drawable/side_nav_bar.xml" value="0.129" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/activity_calendar_view_holder.xml" value="0.15307971014492755" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/activity_change_password.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/activity_change_password.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/activity_change_profile.xml" value="0.16032608695652173" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/activity_dashboard.xml" value="0.18" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/activity_fragment_logout.xml" value="0.12060810810810811" />
@@ -56,7 +56,7 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/fragment_reminder2.xml" value="0.1287568306010929" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/fragment_slideshow.xml" value="0.14" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/fragment_slideshow2.xml" value="0.12905405405405404" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/nav_header_dashboard.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/nav_header_dashboard.xml" value="0.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/nav_header_home_ui.xml" value="0.1287568306010929" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/nav_header_homu_ui.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AgritechturaApp/app/src/main/res/layout/nav_header_main.xml" value="0.33" />

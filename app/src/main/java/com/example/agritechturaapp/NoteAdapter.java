@@ -10,39 +10,33 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
 import java.util.List;
 
-public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder>{
-    Context context;
-    List<Note> postLists;
+public class NoteAdapter extends FirestoreRecyclerAdapter<Note, NoteAdapter.NoteViewHolder> {
+Context context;
 
-    public NoteAdapter(Context context, List<Note> postLists) {
+
+    public NoteAdapter(@NonNull FirestoreRecyclerOptions<Note> options, Context context) {
+        super(options);
         this.context = context;
-        this.postLists = postLists;
-    }
-
-    @NonNull
-    @Override
-    public NoteViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.note_item,parent, false);
-        return new NoteViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull NoteViewHolder holder, int position) {
-       Note note = postLists.get(position);
+    protected void onBindViewHolder(@NonNull NoteViewHolder holder, int position, @NonNull Note note) {
         holder.notes_textView.setText(note.title);
         holder.content_textView.setText(note.content);
         holder.time_textView.setText(Utility.timestampToString(note.timestamp));
     }
 
-
+    @NonNull
     @Override
-    public int getItemCount() {
-        return postLists.size();
+    public NoteViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.note_item,parent, false);
+        return new NoteViewHolder(view);
     }
-
 
     class NoteViewHolder extends RecyclerView.ViewHolder{
 

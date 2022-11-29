@@ -13,16 +13,23 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="@string/nav_header_title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileImage"
+        android:layout_width="107dp"
+        android:layout_height="94dp"
+        android:layout_gravity="left"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/profilepic"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/profilename"
+        android:layout_width="275dp"
         android:layout_height="wrap_content"
-        android:text="@string/nav_header_subtitle" />
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:text="@string/nav_header_agritehtura"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+
 </LinearLayout>

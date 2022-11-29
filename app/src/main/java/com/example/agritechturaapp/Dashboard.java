@@ -63,7 +63,38 @@ public class Dashboard extends AppCompatActivity  implements NavigationView.OnNa
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-                menu_profile = (ImageView) findViewById(R.id.menu_profile);
+        View headerView = navigationView.getHeaderView(0);
+        TextView name = (TextView) headerView.findViewById(R.id.profilename);
+        CircleImageView profileImageView = headerView.findViewById(R.id.profileImage);
+
+
+        Auth = FirebaseAuth.getInstance();
+        User = Auth.getCurrentUser();
+        databaseReference = FirebaseDatabase.getInstance().getReference("users").child(User.getUid());
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User user = snapshot.getValue(User.class);
+                assert user != null;
+                name.setText(user.getFullname());
+                name.setAllCaps(true);
+                if(user.getProfileImage().equals("default")){
+                    profileImageView.setImageResource(R.drawable.profilepic);
+                }else{
+                    Glide.with(getApplicationContext()).load(user.getProfileImage()).into(profileImageView);
+                }
+            }
+
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(Dashboard.this, "Error", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
+        menu_profile = (ImageView) findViewById(R.id.menu_profile);
                 menu_profile.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {

@@ -32,4 +32,6 @@
     <string name="back">back</string>
     <string name="forward">forward</string>
     <string name="menu_changePassword">Change password</string>
+    <string name="nav_header_blood">Gemmalyn Cuilan</string>
+    <string name="nav_header_agritehtura">name</string>
 </resources>

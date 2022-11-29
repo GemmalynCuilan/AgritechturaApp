@@ -64,7 +64,7 @@ public class ProfileActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 User user = snapshot.getValue(User.class);
                 assert user != null;
-                name.setText(user.getName());
+                name.setText(user.getFullname());
                 name.setAllCaps(true);
                 emailAdd.setText(User.getEmail());
 

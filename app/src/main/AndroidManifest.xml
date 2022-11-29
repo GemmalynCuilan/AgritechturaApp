@@ -19,6 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AgritechturaApp"
         tools:targetApi="31">
+
         <activity
             android:name=".OrganicFarming"
             android:exported="false" />
@@ -32,10 +33,7 @@
             android:name=".NoteListActivity"
             android:exported="false" />
         <activity
-            android:name=".changeProfile"
-            android:exported="false" />
-        <activity
-            android:name=".changePassword"
+            android:name=".profile.ChangePassword"
             android:exported="false" />
         <activity
             android:name=".NotesActivity"
